@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-cert-deployment
+  labels: 
+    app: employee-cert-label
+    type: employee-cert-rs
+spec:
+  template:
+    metadata:
+      name: employee-cert-pod
+      labels: 
+        app: employee-cert-label
+        type: employee-cert-service
+    spec:
+      containers:
+      - name: employee-cert-pod
+        image: azurecloud1/employee-cert:1.0-amd64
+        ports:
+        - containerPort: 9000
+
+  replicas: 3 
+  selector:
+   matchLabels:
+      type: employee-cert-service
+
+
+
+ 
+        

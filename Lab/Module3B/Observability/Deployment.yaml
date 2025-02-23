@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: observability-deployment
+  labels: 
+    app: employee-cert-label
+    type: employee-cert-rs
+spec:
+  template:
+    metadata:
+      name: employee-cert-pod
+      labels: 
+        app: employee-cert-label
+        type: employee-cert-service
+    spec:
+      containers:
+      - name: employee-cert-pod
+        image: azurecloud1/employee-cert:1.0-amd64
+        ports:
+        - containerPort: 9000
+        readinessProbe: # Readiness is used to verify if the application is ready to accept the traffic
+          httpGet:
+            path: /
+            port: readiness-port
+          failureThreshold: 5
+          periodSeconds: 10
+          initialDelaySeconds: 60
+        livenessProbe: # Liveness is used to verify if the application is alive or does it require a restart
+          httpGet:
+            path: /
+            port: liveness-port
+          failureThreshold: 5
+          periodSeconds: 10
+          initialDelaySeconds: 60
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+  replicas: 3 
+  selector:
+   matchLabels:
+      type: employee-cert-service
+
+
+
+ 
+        

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dotnet-pod
+  labels: 
+    app: dotnet-pod-label
+    type: dotnet-pod
+spec:
+  containers:
+    - name: dotnet-pod
+      image: azurecloud1/dotnet-webapp:1.0-amd64
+      ports:
+      - containerPort: 80
+
+ 
