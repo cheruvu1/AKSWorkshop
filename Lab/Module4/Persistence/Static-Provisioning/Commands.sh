@@ -25,10 +25,12 @@ click on Create
 4. Security + Networking --> Access Keys --> Copy the key1
 <Key>
 
-Woxz0WGmrUAUDCsw+bXQuY+aKHLpwq/rINt5ajK98ERJC0c2nBcS7pent0yV7G37JTWDRbE2hvRf+AStkxV77g==
-
+ 
 5. kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=staticstorageaccount  --from-literal=azurestorageaccountkey=<Key>
-kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=staticstorageaccount  --from-literal=azurestorageaccountkey=Woxz0WGmrUAUDCsw+bXQuY+aKHLpwq/rINt5ajK98ERJC0c2nBcS7pent0yV7G37JTWDRbE2hvRf+AStkxV77g==
+kubectl create secret generic azure-secret 
+--from-literal=azurestorageaccountname=staticstorageaccount  
+--from-literal=azurestorageaccountkey=<Key>
+
 
 kubectl get secrets
 Note: Make sure azure-secret created successfully
