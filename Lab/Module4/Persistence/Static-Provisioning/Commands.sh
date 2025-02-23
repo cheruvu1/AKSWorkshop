@@ -22,15 +22,14 @@ Expand Data storage --> File Shares --> + File Share --> static-file-share
 click on Review + Create
 click on Create
 
-4. Security + Networking --> Access Keys --> Copy the key1
-<Key>
+4. Security + Networking --> Access Keys --> Capture  
+ 
 
  
-5. kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=staticstorageaccount  --from-literal=azurestorageaccountkey=<Key>
-kubectl create secret generic azure-secret 
+5. kubectl create secret generic azure-secret 
 --from-literal=azurestorageaccountname=staticstorageaccount  
---from-literal=azurestorageaccountkey=<Key>
-
+--from-literal=azurestorageaccountkey=Replace with your key
+ 
 
 kubectl get secrets
 Note: Make sure azure-secret created successfully
@@ -85,9 +84,11 @@ RG: MC_aksbyexample_aksbyexample_usgovarizona
 2. Go to --> Storage Account --> staticstorageaccount
 
 Data storage --> File Shares --> + File Share --> static-file-share
-3. Security + Networking --> Access Keys --> Copy key1
-<Key>
-4. kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=staticstorageaccount  --from-literal=azurestorageaccountkey=<Key>
+3. Security + Networking --> Access Keys --> Capture 
+ 
+4. kubectl create secret generic azure-secret 
+--from-literal=azurestorageaccountname=staticstorageaccount  
+--from-literal=azurestorageaccountkey= Replace with your key
 5. kubectl get secrets 
 6. kubectl apply -f azure-file-pv.yaml
 7. kubectl get pv 
@@ -96,7 +97,7 @@ Data storage --> File Shares --> + File Share --> static-file-share
 9. kubectl get pvc
 NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 azurefile      Bound    azurefile                                  5Gi        RWX                           15s
-my-azurefile   Bound    pvc-e07483b3-219e-478b-90f8-40859e725ed9   5Gi        RWX            my-azurefile   99m
+my-azurefile   Bound    pvc-                                       5Gi        RWX            my-azurefile   99m
 10. kubectl apply -f app-pod.yaml 
 11. kubectl get pods
 12. kubectl describe pod mypod 
