@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
     - name: employee-producer-pod
-      image: aksbyexampleacr.azurecr.us/employee-producer:1.0-amd64
+      image: azurecloud1/employee-producer:1.0-amd64
       ports:
       - containerPort: 8000
       volumeMounts:
@@ -18,7 +18,7 @@ spec:
   volumes:
     - name: first-volume
       hostPath:
-         path: /mydata 
+         path: /dev 
          type: Directory
 
 

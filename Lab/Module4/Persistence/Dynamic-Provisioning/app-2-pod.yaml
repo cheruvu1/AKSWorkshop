@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nginx-2
+  name: nginx-storageclass-pod-2
 spec:
   containers:
   - name: mypod

@@ -8,13 +8,15 @@
 6. Publish the containers to  ACR (Azure Container Registry) - (Optional)
 7. Publish the docker containers to Docker Hub (Optional)
 
+# MODULE - 1
+
 ## 1.Download Lab Source code
 
-GitHub URL:
+GitHub URL:<https://github.com/cheruvu1/AKSWorkshop>
+Go to: Windows Command Prompt - Desktop App
+type cmd in the search
 
-mkdir lab
-cd lab
-github clone https://
+github clone <https://github.com/cheruvu1/AKSWorkshop.git>
 
 MODULE - 1
 
@@ -40,9 +42,18 @@ docker rmi <Image ID>
 docker run -d -p 8000:8000 employee-producer:1.0  
 docker ps
 
+## Test application using the brower
 <http://localhost:8000/employee>
-docker stop <container id>
-docker rm <container id>  
+
+## If  you want to delete a image
+
+1. docker ps
+2. If process is running,
+    docker stop <CONTAINER ID>
+3. docker images
+4. docker rmi <IMAGE ID>
+   You can also force to delete the image:
+   docker rmi --force image <IMAGE ID>
 
 ## For the ARM MAC Users ONLY  
 
@@ -66,11 +77,19 @@ docker rmi <Image ID>
 docker run -d -p 9000:9000 employee-cert:1.0  
 docker ps
 
+## Test application using the brower
+
 <http://localhost:9000/empcertifications>  
 
-docker stop <container id>
+## If  you want to delete a image
 
-docker rm <container id>  
+1. docker ps
+2. If process is running,
+    docker stop <CONTAINER ID>
+3. docker images
+4. docker rmi <IMAGE ID>
+   You can also force to delete the image:
+   docker rmi --force image <IMAGE ID>
 
 ## For the ARM MAC Users ONLY  
 
@@ -94,9 +113,20 @@ docker images
 docker rmi <Image ID>
 docker run -d -p 80:80 dotnet-webapp:1.0
 docker ps
-<http://localhost:80> TEST
-docker stop <container id>
-docker rm <container id>  
+
+## Test application using the brower
+
+<http://localhost:80>  
+
+## If  you want to delete a image
+
+1. docker ps
+2. If process is running,
+    docker stop <CONTAINER ID>
+3. docker images
+4. docker rmi <IMAGE ID>
+   You can also force to delete the image:
+   docker rmi --force image <IMAGE ID>
 
 ## For the ARM MAC Users ONLY  
 
