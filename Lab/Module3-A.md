@@ -12,8 +12,6 @@
 8. Cron Jobs
 9. Multi-Container Pods and Init Containers
 
-
-
 cd AKSWorkshop
 
 ## 1. Kubectl - Imperative Approach
@@ -90,7 +88,6 @@ kubectl logs dotnet-pod
 
 kubectl describe pod dotnet-pod
 
-
 ## 4. Service
 
 cd lab
@@ -149,7 +146,7 @@ kubectl delete pod employee-producer-replicaset-xxxx
 
 kubectl get pods
 
-## 6. Deploymen
+## 6. Deployment
 
 cd lab
 cd Module3A
@@ -172,7 +169,7 @@ kubectl get rs
 
 kubectl get pods
 
-## To Delete a deployment (THIS SECTION IS INFORMATIONAL ONLY) - Not for the Lab Exercise 
+## To Delete a deployment (THIS SECTION IS INFORMATIONAL ONLY) - Not for the Lab Exercise
 
 kubectl delete deployment employee-producer-deployment
 
