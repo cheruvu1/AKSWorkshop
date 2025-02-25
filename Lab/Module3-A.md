@@ -1,11 +1,14 @@
 ## Module 3: Kubernetes Core Concepts
 
+https://github.com/cheruvu1/AKSWorkshop
+
+
 1. Kubectl - Imperative Approach
 2. YAML - Declarative Approach
 3. Pod
 4. Service
 5. ReplicaSet (Scaling Pods)
-6. Deployment -  Rolling Updates and Roll Backs
+6. Deployment
 7. Labels, Selectors & Annotations
 8. Jobs and Cron Jobs
 9. Multi-Container Pods and Init Containers
@@ -63,7 +66,7 @@ kubectl get pods
 kubectl logs dotnet-pod
 kubectl describe pod dotnet-pod
 
-## Useful Pod Commands
+## Future reference useful Pod Commands (Not for the lab exercise)
 
 kubectl get pod label-demo -o=yaml
 
@@ -210,6 +213,10 @@ kubectl get pods --show-labels
 kubectl get pods --selector=environment=production
 kubectl apply -f annotations-example.yaml
 
-## 8. Jobs and Cron Jobs
+## 8. Cron Jobs
+
+kubectl apply -f cronjob-example.yaml
+kubectl get cronjob hello
+kubectl get jobs --watch
 
 ## 9. Multi-Container Pods and Init Containers

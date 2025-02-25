@@ -16,7 +16,7 @@ GitHub URL:<https://github.com/cheruvu1/AKSWorkshop>
 Go to: Windows Command Prompt - Desktop App
 type cmd in the search
 
-github clone <https://github.com/cheruvu1/AKSWorkshop.git>
+github clone https://github.com/cheruvu1/AKSWorkshop.git
 
 MODULE - 1
 
