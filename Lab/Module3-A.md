@@ -114,15 +114,15 @@ kubectl get services [Capture the Load Balancer IP#]
 
 ## DotNet
 
-http://<LB IP>
+http://YOUR LOADBALANCER IP
 
 ## Employee Producer
 
-http://<LB IP>:8000/employee
+http://YOUR LOADBALANCER IP:8000/employee
 
 ## Employee Cert
 
-http://<LB IP>:9000/empcertifications
+http://YOUR LOADBALANCER IP:9000/empcertifications
 
 ## 5. ReplicaSet (Scaling Pods)
 
