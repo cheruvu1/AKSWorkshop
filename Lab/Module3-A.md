@@ -1,7 +1,6 @@
 ## Module 3: Kubernetes Core Concepts
 
-https://github.com/cheruvu1/AKSWorkshop
-
+<https://github.com/cheruvu1/AKSWorkshop>
 
 1. Kubectl - Imperative Approach
 2. YAML - Declarative Approach
@@ -18,7 +17,9 @@ https://github.com/cheruvu1/AKSWorkshop
 # Create Pod using command line
 
 kubectl run webapp-pod --image=nginx
+
 kubectl get pods webapp-pod --watch
+
 kubectl get pods webapp-pod --output wide
 
 # Create a Service using command line
