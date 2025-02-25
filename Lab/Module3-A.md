@@ -52,7 +52,7 @@ cd lab
 
 cd Module3A
 
-kubectl apply -f service-employee-producer.yaml
+kubectl apply -f employee-producer-pod.yaml
 
 kubectl get pods
 
@@ -66,7 +66,7 @@ cd lab
 
 cd Module3A
 
-kubectl apply -f service-employee-cert.yaml
+kubectl apply -f employee-cert-pod.yaml
 
 kubectl get pods
 
