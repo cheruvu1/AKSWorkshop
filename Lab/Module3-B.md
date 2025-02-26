@@ -9,12 +9,10 @@
 4. How to use Secrets and ConfigMap in Pods
 5. Namespaces
 6. Service Discovery
-7. Deployment Rolling Update and Recreate
-8. Canary Deployment
-9. Blue/Green Deployment
-10. Observability with  Readiness Probes
-11. Observability with  Liveness Probes
-12. Kubernetes Resources – Requests and Limits  
+7. Deployment Rolling Update
+8. Observability with  Readiness Probes
+9. Observability with  Liveness Probes
+10. Kubernetes Resources – Requests and Limits  
 
 cd lab
 cd Module3B
@@ -124,9 +122,24 @@ curl <http://service-employee-producer-pod.marketing.svc.cluster.local:8000/empl
 Run the exit command
 root@employee-cert-pod:/# exit
 
-## 10. Observability with  Readiness Probes &  
+## 7. Deployment Rolling Update
 
-## 11. Observability with  Liveness Probes
+cd AKSWorkshop/Lab/Module3B/RollingUpdate
+
+1. kubectl apply -f RollingUpdate-Deployment.yaml
+2. kubectl get pods | grep -i 'echo'
+3. Open the file RollingUpdate-Deployment.yaml    
+   Line# 32: Change Image
+   from image: azurecloud1/employee-producer:v1.0.0
+
+   To azurecloud1/employee-producer:v2.0.0
+
+4. kubectl apply -f RollingUpdate-Deployment.yaml
+5. kubectl get pods | grep -i 'echo
+
+## 8. Observability with  Readiness Probes &  
+
+## 9. Observability with  Liveness Probes
 
 cd lab
 cd Module3B
@@ -134,7 +147,7 @@ cd Observability
 Review readinessProbe.yaml
 Review livenessProbe.yaml
 
-## 12. Kubernetes Resources – Requests and Limits  
+## 10. Kubernetes Resources – Requests and Limits  
 
 cd lab
 cd Module3B
@@ -144,9 +157,4 @@ kubectl apply -f namespace-resourcelimit.yaml
 kubectl apply -f employee-cert-pod.yaml
 kubectl get all -n resourcelimit
 kubectl describe pod employee-cert-pod -n resourcelimit
-Note: Review Limits and Requests CPU and Memory 
-
-
-
-
-
+Note: Review Limits and Requests CPU and Memory
