@@ -394,7 +394,7 @@ Test the application in a browser: http://<Load balancer IP>
 
 8. Open aks-helloworld-one.yaml
 
-Line # 27 change to type: ClusterIP
+Line # 29 change to type: ClusterIP
 
 9. Open aks-helloworld-two.yaml
 
