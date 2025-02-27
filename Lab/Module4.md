@@ -44,6 +44,10 @@ click on Create
 
 5. Ask instructor for the Secret Command
 
+6. kubectl create secret generic azure-secret 
+--from-literal=azurestorageaccountname=staticstorageaccount  
+--from-literal=azurestorageaccountkey=<Replace with your key>
+
 kubectl get secrets
 
 Note: Make sure azure-secret created successfully
