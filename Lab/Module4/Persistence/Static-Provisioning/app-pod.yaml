@@ -19,7 +19,7 @@ spec:
   volumes:
   - name: azure
     persistentVolumeClaim:
-      claimName: azurefile
+      claimName: pvc-azurefile
     # azureFile:
       # secretName: azure-secret
       # shareName: aksshare
