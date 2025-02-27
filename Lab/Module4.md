@@ -400,7 +400,11 @@ Line # 29 change to type: ClusterIP
 
 Line # 26 change to type: ClusterIP
 
-10. kubectl apply -f hello-world-ingress.yaml
+10. kubectl apply -f aks-helloworld-one.yaml
+
+11. kubectl apply -f aks-helloworld-two.yaml
+    
+12. kubectl apply -f hello-world-ingress.yaml
 
 ## Output
 
