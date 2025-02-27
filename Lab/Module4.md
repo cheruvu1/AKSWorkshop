@@ -180,7 +180,7 @@ Azure Portal --> RG: MC_aksworkshopRG_aksworkshopcluster_usgovvirginia
 
 content and Add text --> Hello from Azure Cloud Storage Account --> Pod File Share.
 
-# From inside the Pod shell
+From inside the Pod shell
 
      Hello from Azure Cloud Storage Account --> Pod File Share. 
 
@@ -192,11 +192,11 @@ content and Add text --> Hello from Azure Cloud Storage Account --> Pod File Sha
 
     kubectl exec pod/nginx-storageclass-pod-2 -it -- /bin/sh
 
-    # From inside the Pod shell:
+    From inside the Pod shell:
 
-    # ls /mnt/azure
+    ls /mnt/azure
 
-    # cat /mnt/azure/myfile.txt
+    cat /mnt/azure/myfile.txt
 
     exit
 
@@ -204,7 +204,7 @@ content and Add text --> Hello from Azure Cloud Storage Account --> Pod File Sha
 
 ## Run the below command to enable the NetworkPolicy Azure plug-in
 
-## Note: Below command takes 10 to 15 minutes
+## Note: Below updates command takes 10 to 15 minutes
 
 az aks update --resource-group <AKSResource Group > --name <AKS Cluster Name> --network-policy azure
 
