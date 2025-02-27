@@ -87,15 +87,15 @@ Mounts:
 
 9. kubectl exec pod/mypod -it -- /bin/sh
 
-   # From inside the Pod shell
+   From inside the Pod shell
 
-   # ls /mnt/azure
+   ls /mnt/azure
 
-   # echo "Hello from Azure File Share-Static-Provisioning sharing - Pod" > /mnt/azure/StaticShare.txt
+   echo "Hello from Azure File Share-Static-Provisioning sharing - Pod" > /mnt/azure/StaticShare.txt
 
-   # ls /mnt/azure
+   ls /mnt/azure
 
-   # cat /mnt/azure/StaticShare.txt
+   cat /mnt/azure/StaticShare.txt
 
 10. Azure Protal --> Data storage -->
 
@@ -164,17 +164,17 @@ Azure Portal --> RG: MC_aksworkshopRG_aksworkshopcluster_usgovvirginia
 
 11. kubectl exec pod/nginx-storageclass-pod -it -- /bin/sh
 
-    # From inside the Pod shell
+    From inside the Pod shell
 
-    # ls /mnt/azure
+    ls /mnt/azure
 
-    # echo "Hello from Azure File Share - Pod" > /mnt/azure/myfile.txt
+    echo "Hello from Azure File Share - Pod" > /mnt/azure/myfile.txt
 
-    # ls /mnt/azure
+    ls /mnt/azure
 
-    # cat /mnt/azure/myfile.txt
+    cat /mnt/azure/myfile.txt
 
-    # exit
+    exit
 
 12. Go to --> Azure Portal --> File shares --> pod-file-share --> myfile.txt --> Edit --> See the  
 
@@ -204,11 +204,11 @@ content and Add text --> Hello from Azure Cloud Storage Account --> Pod File Sha
 
 ## Run the below command to enable the NetworkPolicy Azure plug-in
 
-## Note: Below command takes 10 to 15 minutes 
+## Note: Below command takes 10 to 15 minutes
 
 az aks update --resource-group <AKSResource Group > --name <AKS Cluster Name> --network-policy azure
 
-## Sample 
+## Sample
 
 az aks update --resource-group aksworkshopRG --name aksworkshopcluster --network-policy azure
 
@@ -254,7 +254,7 @@ Capture the backend  IP# : 10.244.1.243
 <title>Welcome to nginx!</title>
 <style>
 
-## Apply the Backend Network Policy 
+## Apply the Backend Network Policy
 
 6. kubectl apply -f backend-network-policy.yaml
 
