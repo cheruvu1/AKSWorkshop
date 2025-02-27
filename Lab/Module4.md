@@ -249,14 +249,12 @@ Capture the backend  IP# : 10.244.1.243
 ## Output
 
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title>Welcome to nginx!</title>
-
 <style>
+
+## Apply the Backend Network Policy 
 
 6. kubectl apply -f backend-network-policy.yaml
 
