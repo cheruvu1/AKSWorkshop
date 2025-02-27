@@ -331,8 +331,8 @@ wget: download timed out
 
 ## Step 1: Installing NGINX Ingress Controller
 
-1. HELM controller is required to install NGINX Ingress controller.  Lab VM already installed HELM
-
+1. HELM controller is required to install NGINX Ingress controller. HELM already installed in the Lab VM.
+  
 2. helm version
 
 # 3. Add the Helm repository:
