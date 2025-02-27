@@ -272,13 +272,13 @@ kubectl exec -it backend-app-69f5976d6b-bbdpk -- curl -sS 10.244.1.146  --max-ti
 
 kubectl run busybox --image=busybox --rm -it -- /bin/sh
 
-# 1 Usecase
+First Usecase
 
-## Test frontend connectivity - Should work
+## Test frontend connectivity 
 
 wget --spider --timeout=1 10.244.1.146
 
-# 2 Use case
+Second Usecase
 
 wget --spider --timeout=1 10.244.1.243
 
