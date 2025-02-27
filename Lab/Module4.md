@@ -217,6 +217,13 @@ Click on Save button
 
 ## Note: Below updates command takes 10 to 15 minutes
 
+Option # 1: (DO THIS OPTION FOR THE NETWORK POLICY LAB) 
+
+     1. Create a Brand new AKS Cluster (MUST)
+     2. Networking Tab --> Select Network configuration: Azure CNI Overlay
+     3. Networking Tab --> Select Network Policy: Select Azure
+
+Option # 2: (IGNORE FOR THE LAB) 
 az aks update --resource-group <AKSResource Group > --name <AKS Cluster Name> --network-policy azure
 
 ## Sample
