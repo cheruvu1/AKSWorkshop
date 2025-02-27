@@ -176,13 +176,20 @@ Azure Portal --> RG: MC_aksworkshopRG_aksworkshopcluster_usgovvirginia
 
     exit
 
-12. Go to --> Azure Portal --> File shares --> pod-file-share --> myfile.txt --> Edit --> See the  
+12. Go to --> Azure Portal --> Storage accounts --> Name starts with fcxxxxxxx
 
-content and Add text --> Hello from Azure Cloud Storage Account --> Pod File Share.
+Storage Browser --> Data storage --> File shares --> click on pod-file-share 
 
-From inside the Pod shell
+Go to Browser --> myfile.txt --> Click on three dots on the right side ... 
 
-     Hello from Azure Cloud Storage Account --> Pod File Share. 
+Select the Edit option 
+
+Add below text
+
+Hello from Azure Cloud Storage Account 
+
+Click on Save button
+
 
 13. Create a 2nd Pod try to access the Storage Account
 
