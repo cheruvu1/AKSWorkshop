@@ -163,14 +163,6 @@ cd AKSWorkshop/Lab/Module3B/RollingUpdate
 
 5. kubectl get pods | grep -i 'echo
 
-## ROLL BACK
-
-kubectl rollout history deployment/echo-app-perc
-
-kubectl rollout undo deploy echo-app-perc --to-revision=1
-
-kubectl get pods | grep -i 'echo'
-
 ## 8. Observability with  Readiness Probes &  
 
 ## 9. Observability with  Liveness Probes
