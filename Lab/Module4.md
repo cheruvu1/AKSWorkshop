@@ -329,6 +329,31 @@ wget: download timed out
 
 ## 6. Ingress Controller
 
+## Step 1: Installing NGINX Ingress Controller
+
+1. HELM controller is required to install NGINX Ingress controller.  Lab VM already installed HELM
+
+2. helm version
+
+# 3. Add the Helm repository:
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+helm repo update
+
+# 4. Install the NGINX Ingress Controller:
+
+ helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+
+ # 5. Check the status of the Ingress Controller:
+
+kubectl get pods -n ingress-nginx
+
+kubectl get svc -n ingress-nginx
+
+
+## Step 2: Deploy the application
+
 cd AKSWorkshop/Lab/Module4/IngressController
 
 1. Review aks-helloworld-one.yaml
